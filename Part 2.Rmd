@@ -1,0 +1,50 @@
+---
+title: "Part 2"
+author: "Phil Mai"
+date: "December 4, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Loading Libraries
+```{r}
+library(ggplot2)
+```
+
+## Statistical Inference Part 2
+Now in the second portion of the project, we're going to analyze the ToothGrowth data in the R datasets package.
+
+1. Load the ToothGrowth data and perform some basic exploratory data analyses
+2. Provide a basic summary of the data.
+3. Use confidence intervals and/or hypothesis tests to compare tooth growth by supp and dose. (Only use the techniques from class, even if there's other approaches worth considering)
+4. State your conclusions and the assumptions needed for your conclusions.
+
+##Step1 - Loading the ToothGrowth Data
+```{r}
+data(ToothGrowth)
+ggplot(ToothGrowth, aes(x=factor(dose), y=len, fill=factor(dose)))+geom_boxplot()+facet_grid(.~supp)+ggtitle("Analyzing ToothGrowth data")
+```
+
+
+##Step2 - Provide a Basic Summary
+```{r}
+summary(ToothGrowth)
+```
+The code shows a summary of the data set. It shows 2 supplements OJ and VC and 3 doses 0.5, 1, and 2 for in the dataset.
+
+##Step 3 - Confidence Internvals and/or Hypothesis Test
+```{r}
+xBar<-mean(ToothGrowth$len[1:30])
+yBar<-mean(ToothGrowth$len[31:60])
+xVar<-(sd(ToothGrowth$len[1:30]))^2
+yVar<-(sd(ToothGrowth$len[31:60]))^2
+q<-(((xVar+yVar)/30)^2)/((((xVar/30)^2)+((yVar/30)^2))/29)
+t<-qt(0.975, q)
+yBar -xBar + c(-1,1)*t*sqrt(xVar/30 + yVar/30)
+```
+
+##Step #4 - Stating Conclusion
+Through the boxplot, it can be concluded that as tooth size increases, the doses tend to be higher. The confidence interval is (-0.171, 7.571).
