@@ -10,22 +10,22 @@
   Illustrate via simulation and associated explanatory text the properties of the distribution of the mean of 40 exponentials. You should:
 </dt>
 
-<dd>
-  1. Show the sample mean and compare it to the theoretical mean of the distribution.
-  2. Show how variable the sample is (via variance) and compare it to the theoretical variance of the distribution.
-  3. Show that the distribution is approximately normal.
-</dd>
+<ol>
+  <li> Show the sample mean and compare it to the theoretical mean of the distribution.</li>
+  <li> Show how variable the sample is (via variance) and compare it to the theoretical variance of the distribution.</li>
+  <li> Show that the distribution is approximately normal.</li>
+</ol>
 
 <dl>
   <dt>
     Part 2
   </dt>
   
-<dd>
-  Analyze the ToothGrowth data in the R datasets package.
-Load the ToothGrowth data and perform some basic exploratory data analyses
-Provide a basic summary of the data.
-Use confidence intervals and/or hypothesis tests to compare tooth growth by supp and dose. (Only use the techniques from class, even if there's other approaches worth considering)
-State your conclusions and the assumptions needed for your conclusions.
-</dd>
+<ol>
+  <li> Analyze the ToothGrowth data in the R datasets package.</li>
+  <li> Load the ToothGrowth data and perform some basic exploratory data analyses.</li>
+  <li> Provide a basic summary of the data.</li>
+  <li> Use confidence intervals and/or hypothesis tests to compare tooth growth by supp and dose. (Only use the techniques from class, even if there's other approaches worth considering)</li>
+   <li> State your conclusions and the assumptions needed for your conclusions.</li>
+</ol>
 </dl>
